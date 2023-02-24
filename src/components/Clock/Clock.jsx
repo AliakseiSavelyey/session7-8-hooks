@@ -1,25 +1,22 @@
-import React, { Component } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Clock.scss';
 
-export default class Clock extends Component {
-  state = {
-    time: new Date().toLocaleTimeString(),
-  };
+export default function Clock() {
+  const [time, setTime] = useState(() => new Date());
+  const intervalId = useRef(null);
 
-  intervalId = null;
+  useEffect(() => {
+    intervalId.current = setInterval(() => setTime(new Date()), 1000);
 
-  componentDidMount() {
-    this.intervalId = setInterval(
-      () => this.setState({ time: new Date().toLocaleTimeString() }),
-      1000,
-    );
-  }
+    // ниже очистка перед уходом,(размонтирование) аналог componentWillUnmount.Вызывается каждый раз перед следующим запуском useEffect
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
-  componentWillUnmount() {
-    clearInterval(this.intervalId);
-  }
-
-  render() {
-    return <div className="Clock-face">{this.state.time}</div>;
-  }
+  return (
+    <div className="Clock-face">
+      <p>Текущее время: {time.toLocaleTimeString()}</p>
+    </div>
+  );
 }

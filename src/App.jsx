@@ -151,7 +151,7 @@ class App extends Component {
           value={this.state.inputValue}
           onChange={this.handleInputChange}
         ></input>
-        {/* <Form giveMeData={this.formSubmitHandler} /> */}
+        <Form giveMeData={this.formSubmitHandler} />
         <Dropdown />
         <ColorPicker options={colorPickerOptions} />
       </>
