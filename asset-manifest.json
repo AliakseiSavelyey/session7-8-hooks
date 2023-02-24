@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/session7-8-hooks/static/css/main.a300da0e.css",
+    "main.js": "/session7-8-hooks/static/js/main.6cb43f85.js",
+    "index.html": "/session7-8-hooks/index.html",
+    "static/media/add.svg": "/session7-8-hooks/static/media/add.b32f3a092015d7a228e03084a624cb0b.svg",
+    "main.a300da0e.css.map": "/session7-8-hooks/static/css/main.a300da0e.css.map",
+    "main.6cb43f85.js.map": "/session7-8-hooks/static/js/main.6cb43f85.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a300da0e.css",
+    "static/js/main.6cb43f85.js"
+  ]
+}
