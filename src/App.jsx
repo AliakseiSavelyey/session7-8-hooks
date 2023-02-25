@@ -14,6 +14,7 @@ import Tabs from 'components/Tabs';
 import tabs from 'data/tabs.json';
 import IconButton from './components/IconButton/IconButton';
 import { ReactComponent as AddIcon } from './icons/add.svg';
+// import Appbar from 'components/AppBar/AppBar';
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
@@ -113,11 +114,7 @@ class App extends Component {
 
     return (
       <>
-        <br />
-        <h1>Состояние компонента и Формы</h1>
-        <h2>Как установить SASS пути в проекте</h2>
-        <h2>Генерация Id элементов в форме</h2>
-        <br />
+        {/* <Appbar /> */}
         <Tabs items={tabs} />
         <button type="button" onClick={this.toggleTime}>
           Открыть/Скрыть время
